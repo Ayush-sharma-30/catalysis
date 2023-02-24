@@ -2,20 +2,21 @@ import React from 'react'
 
 const Events = () => {
 
-    const handleClick = () => {
-        const link = document.createElement("a");
-        link.href = "rulebook/CodingJam.pdf";
-        link.download = "CodingJam.pdf";
-        link.click();
+    const handleClick = (filename) => {
+        // const link = document.createElement("a");
+        // window.location.href = "../assets/rulebook/"+filename;
+        window.open("../assets/rulebook/"+filename, "_blank");
+        // link.download = filename;
+        // link.click();
     };
 
   return (
-      <div style={{backgroundColor: "#071E22"}}>
+      <div style={{backgroundColor: "#071E22"}} id="event">
           <h1 className="font-bold text-center text-5xl p-8" style={{color:'#E5F2FF'}}>Events</h1>
           <div className="grid sm:grid-cols-4 grid-cols-1">
 
-            <div className="w-3/4 max-w-xs h-5/6 m-14 rounded overflow-hidden shadow-lg bg-white relative">
-                <img className="w-3/4 mx-8 my-4" src="assets/event1.jpeg" alt="Sunset in the mountains"/>
+            <div className="w-3/4 max-w-xs h-5/6 m-14 rounded overflow-hidden shadow-lg bg-white relative"  style={{backgroundColor: "#E5F2FF"}}>
+                <img className="w-3/4 mx-8 my-4" src="assets/event1.jpeg" alt="Event1"/>
                 <div className="px-6 py-4">
                     <div className="font-bold text-lg mb-2">Code Red</div>
                     <p className="text-gray-700 text-base text-sm">
@@ -24,14 +25,14 @@ const Events = () => {
                 </div>
                 <br/><br/>
                 <div className="px-6 absolute bottom-5">
-                    <button className="text-white font-medium py-2 px-4 rounded-lg" onClick={handleClick} style={{backgroundColor: "#071E22"}}>
+                    <button className="text-white font-medium py-2 px-4 rounded-lg" onClick={() => {handleClick("CodeRed.pdf");}} style={{backgroundColor: "#071E22"}}>
                         Download Rule Sheet
                     </button>
                 </div>
             </div>
 
-              <div className="w-3/4 max-w-xs h-5/6 m-14 rounded overflow-hidden shadow-lg bg-white relative">
-                  <img className="w-3/4 mx-8 my-4" src="assets/event2.jpeg" alt="Sunset in the mountains"/>
+              <div className="w-3/4 max-w-xs h-5/6 m-14 rounded overflow-hidden shadow-lg bg-white relative" style={{backgroundColor: "#E5F2FF"}}>
+                  <img className="w-3/4 mx-8 my-4" src="assets/event2.jpeg" alt="Event2"/>
                   <div className="px-6 py-4">
                       <div className="font-bold text-lg mb-2">Coding Jam</div>
                       <p className="text-gray-700 text-base text-sm">
@@ -40,14 +41,14 @@ const Events = () => {
                   </div>
                   <br/><br/>
                   <div className="px-6 absolute bottom-5">
-                      <button className="text-white font-medium py-2 px-4 rounded-lg" onClick={handleClick}  style={{backgroundColor: "#071E22"}}>
+                      <button className="text-white font-medium py-2 px-4 rounded-lg" onClick={() => {handleClick("CodingJam.pdf")}}  style={{backgroundColor: "#071E22"}}>
                           Download Rule Sheet
                       </button>
                   </div>
               </div>
 
-              <div className="w-3/4 max-w-xs h-5/6 m-14 rounded overflow-hidden shadow-lg bg-white relative">
-                  <img className="w-3/4 mx-8 my-4" src="assets/event3.jpeg" alt="Sunset in the mountains"/>
+              <div className="w-3/4 max-w-xs h-5/6 m-14 rounded overflow-hidden shadow-lg bg-white relative" style={{backgroundColor: "#E5F2FF"}}>
+                  <img className="w-3/4 mx-8 my-4" src="assets/event3.jpeg" alt="Event3"/>
                   <div className="px-6 py-4">
                       <div className="font-bold text-lg mb-2">What's The Point</div>
                       <p className="text-gray-700 text-base text-sm">
@@ -56,14 +57,14 @@ const Events = () => {
                   </div>
                   <br/><br/>
                   <div className="px-6 absolute bottom-5">
-                      <button className="text-white font-medium py-2 px-4 rounded-lg" onClick={handleClick}  style={{backgroundColor: "#071E22"}}>
+                      <button className="text-white font-medium py-2 px-4 rounded-lg" onClick={() => {handleClick("Debate.pdf")}}  style={{backgroundColor: "#071E22"}}>
                           Download Rule Sheet
                       </button>
                   </div>
               </div>
 
-              <div className="w-3/4 max-w-xs h-5/6 m-14 rounded overflow-hidden shadow-lg bg-white relative">
-                  <img className="w-3/4 mx-8 my-4" src="assets/event4.jpeg" alt="Sunset in the mountains"/>
+              <div className="w-3/4 max-w-xs h-5/6 m-14 rounded overflow-hidden shadow-lg bg-white relative" style={{backgroundColor: "#E5F2FF"}}>
+                  <img className="w-3/4 mx-8 my-4" src="assets/event4.jpeg" alt="Event4"/>
                   <div className="px-6 py-4">
                       <div className="font-bold text-lg mb-2">Innovator</div>
                       <p className="text-gray-700 text-base text-sm">
@@ -72,14 +73,14 @@ const Events = () => {
                   </div>
                   <br/><br/>
                   <div className="px-6 absolute bottom-5">
-                      <button className="text-white font-medium py-2 px-4 rounded-lg" onClick={handleClick}  style={{backgroundColor: "#071E22"}}>
+                      <button className="text-white font-medium py-2 px-4 rounded-lg" onClick={() => {handleClick("Innovator.pdf")}}  style={{backgroundColor: "#071E22"}}>
                           Download Rule Sheet
                       </button>
                   </div>
               </div>
 
-              <div className="w-3/4 max-w-xs h-5/6 m-14 rounded overflow-hidden shadow-lg bg-white relative">
-                  <img className="w-3/4 mx-8 my-4" src="assets/event5.jpeg" alt="Sunset in the mountains"/>
+              <div className="w-3/4 max-w-xs h-5/6 m-14 rounded overflow-hidden shadow-lg bg-white relative" style={{backgroundColor: "#E5F2FF"}}>
+                  <img className="w-3/4 mx-8 my-4" src="assets/event5.jpeg" alt="Event5"/>
                   <div className="px-6 py-4">
                       <div className="font-bold text-lg mb-2">Call To Launch</div>
                       <p className="text-gray-700 text-base text-sm">
@@ -88,14 +89,14 @@ const Events = () => {
                   </div>
                   <br/><br/>
                   <div className="px-6 absolute bottom-5">
-                      <button className="text-white font-medium py-2 px-4 rounded-lg" onClick={handleClick}  style={{backgroundColor: "#071E22"}}>
+                      <button className="text-white font-medium py-2 px-4 rounded-lg" onClick={() => {handleClick("CallToLaunch.pdf")}}  style={{backgroundColor: "#071E22"}}>
                           Download Rule Sheet
                       </button>
                   </div>
               </div>
 
-              <div className="w-3/4 max-w-xs h-5/6 m-14 rounded overflow-hidden shadow-lg bg-white relative">
-                  <img className="w-3/4 mx-8 my-4" src="assets/event6.jpeg" alt="Sunset in the mountains"/>
+              <div className="w-3/4 max-w-xs h-5/6 m-14 rounded overflow-hidden shadow-lg bg-white relative" style={{backgroundColor: "#E5F2FF"}}>
+                  <img className="w-3/4 mx-8 my-4" src="assets/event6.jpeg" alt="Event6"/>
                   <div className="px-6 py-4">
                       <div className="font-bold text-lg mb-2">Air Crash</div>
                       <p className="text-gray-700 text-base text-sm">
@@ -104,14 +105,14 @@ const Events = () => {
                   </div>
                   <br/><br/>
                   <div className="px-6 absolute bottom-5">
-                      <button className="text-white font-medium py-2 px-4 rounded-lg" onClick={handleClick}  style={{backgroundColor: "#071E22"}}>
+                      <button className="text-white font-medium py-2 px-4 rounded-lg" onClick={() => {handleClick("AirCrash.pdf")}}  style={{backgroundColor: "#071E22"}}>
                           Download Rule Sheet
                       </button>
                   </div>
               </div>
 
-              <div className="w-3/4 max-w-xs h-5/6 m-14 rounded overflow-hidden shadow-lg bg-white relative">
-                  <img className="w-3/4 mx-8 my-4" src="assets/event7.jpeg" alt="Sunset in the mountains"/>
+              <div className="w-3/4 max-w-xs h-5/6 m-14 rounded overflow-hidden shadow-lg bg-white relative" style={{backgroundColor: "#E5F2FF"}}>
+                  <img className="w-3/4 mx-8 my-4" src="assets/event7.jpeg" alt="Event7"/>
                   <div className="px-6 py-4">
                       <div className="font-bold text-lg mb-2">TechnoSeek</div>
                       <p className="text-gray-700 text-base text-sm">
@@ -120,14 +121,14 @@ const Events = () => {
                   </div>
                   <br/><br/>
                   <div className="px-6 absolute bottom-5">
-                      <button className="text-white font-medium py-2 px-4 rounded-lg" onClick={handleClick}  style={{backgroundColor: "#071E22"}}>
+                      <button className="text-white font-medium py-2 px-4 rounded-lg" onClick={() => {handleClick("Technoseek.pdf")}}  style={{backgroundColor: "#071E22"}}>
                           Download Rule Sheet
                       </button>
                   </div>
               </div>
 
-              <div className="w-3/4 max-w-xs h-5/6 m-14 rounded overflow-hidden shadow-lg bg-white relative">
-                  <img className="w-3/4 mx-8 my-4" src="assets/event8.jpeg" alt="Sunset in the mountains"/>
+              <div className="w-3/4 max-w-xs h-5/6 m-14 rounded overflow-hidden shadow-lg bg-white relative" style={{backgroundColor: "#E5F2FF"}}>
+                  <img className="w-3/4 mx-8 my-4" src="assets/event8.jpeg" alt="Event8"/>
                   <div className="px-6 py-4">
                       <div className="font-bold text-lg mb-2">Quiz-Up</div>
                       <p className="text-gray-700 text-base text-sm">
@@ -136,7 +137,7 @@ const Events = () => {
                   </div>
                   <br/><br/>
                   <div className="px-6 absolute bottom-5">
-                      <button className="text-white font-medium py-2 px-4 rounded-lg" onClick={handleClick}  style={{backgroundColor: "#071E22"}}>
+                      <button className="text-white font-medium py-2 px-4 rounded-lg" onClick={() => {handleClick("Quiz.pdf")}}  style={{backgroundColor: "#071E22"}}>
                           Download Rule Sheet
                       </button>
                   </div>
